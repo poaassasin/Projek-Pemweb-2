@@ -17,4 +17,17 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/edutech', function () {
+    return view('EDUTECH.login');
+});
+Route::get('/edutech/dashboard', function () {
+    return view('EDUTECH.dashboard');
+});
+Route::get('/edutech/list', function () {
+    return view('EDUTECH.listMateri');
+});
+Route::get('/edutech/detail', function () {
+    return view('EDUTECH.detailMateri');
+});
+
 require __DIR__.'/auth.php';
